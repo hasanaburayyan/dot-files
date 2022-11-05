@@ -1,0 +1,1 @@
+alias src_my_dots="source ${MY_DOT_FILES_DIR}/.sources.sh"
