@@ -1,0 +1,73 @@
+format = """
+$username\
+$time \
+$aws\
+\n\
+$status \
+$directory \
+$git_branch\
+$git_status \
+\n \
+[﬌ ](#00af00)\
+"""
+
+# Disable the blank line at the start of the prompt
+#add_newline = true
+[cmd_duration]
+min_time = 1
+format = "[ 🕙 $duration]($style)"
+
+[git_branch]
+symbol = ""
+format = "[](#ffffff)[ $symbol ](#58C332 bg:#ffffff)[](#ffffff bg:#58C332)[ $branch ](#ffffff bg:#58C332)"
+
+[git_status]
+format = '[$all_status](#ffffff bg:#58C332)[$ahead_behind](#ffffff bg:#58C332)[](#58C332)'
+
+
+[time]
+disabled = false
+format = "[ $time ](#ffffff bg:#609DFB)[](#609DFB)"
+use_12hr = true
+
+[status]
+format = "[[](#ffffff) $symbol ](#E75053 bg:#ffffff)[](#ffffff bg:#E75053)[ $status ](#ffffff bg:#E75053)[](#E75053)"
+success_symbol = ""
+symbol = ""
+disabled = false
+
+[golang]
+symbol = " "
+disabled = false
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+format = '[](#ffffff)[ ](#609DFB bg:#ffffff)[](#ffffff bg:#609DFB)[ $user](#ffffff bg:#609DFB)'
+
+[directory]
+format = "[](#ffffff)[  ](#F7C743 bg:#ffffff)[](#ffffff bg:#F7C743)[ $path ](#ffffff bg:#F7C743)[](#F7C743 )"
+truncation_length = 5
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+
+[aws]
+disabled = false
+symbol = " "
+force_display = true
+expiration_symbol = "X"
+#format = 'on [$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
+format = "[](#ffffff)[ $symbol ](#ffaf00 bg:#ffffff)[](#ffffff bg:#ffaf00)[$profile in $region](#ffffff bg:#ffaf00)[](#ffaf00 bg:#c12626)[expires in: $duration](fg:255 bg:#c12626)[](#c12626)"
+#[aws.region_aliases]
+#us-east-1 = "use1"
+#us-east-2 = "use2"
+#us-west-1 = "usw1"
+#us-west-2 = "usw2"
+#[aws.profile_aliases]
+#sandbox = 'Anything Goes'
+
+
